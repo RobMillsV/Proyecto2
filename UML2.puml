@@ -1,0 +1,34 @@
+@startuml
+annotation java.lang.Override
+class java.io.BufferedWriter
+class java.io.File
+class java.io.FileOutputStream
+class java.io.IOException
+class java.io.OutputStreamWriter
+class java.io.Writer
+class java.util.Scanner
+class proyectofinal2.ListaOperacion
+class proyectofinal2.ListaOperacionImpl
+class proyectofinal2.NodoListaOperacion
+class proyectofinal2.NodoPilaOperacion
+class proyectofinal2.Operacion
+class proyectofinal2.OperacionTest
+class proyectofinal2.PilaOperacion
+class proyectofinal2.ProyectoFinal2
+interface proyectofinal2.Comparable
+interface proyectofinal2.ValidaStringInt
+proyectofinal2.ListaOperacionImpl --|> proyectofinal2.ListaOperacion
+proyectofinal2.NodoPilaOperacion ..> java.lang.Override
+proyectofinal2.Operacion ..> java.lang.Override
+proyectofinal2.Operacion --|> proyectofinal2.Comparable
+proyectofinal2.Operacion --|> proyectofinal2.ValidaStringInt
+proyectofinal2.OperacionTest ..> java.io.BufferedWriter
+proyectofinal2.OperacionTest ..> java.io.File
+proyectofinal2.OperacionTest ..> java.io.FileOutputStream
+proyectofinal2.OperacionTest ..> java.io.IOException
+proyectofinal2.OperacionTest ..> java.io.OutputStreamWriter
+proyectofinal2.OperacionTest ..> java.io.Writer
+proyectofinal2.OperacionTest ..> java.util.Scanner
+proyectofinal2.PilaOperacion ..> java.lang.Override
+proyectofinal2.PilaOperacion --|> proyectofinal2.NodoPilaOperacion
+@enduml

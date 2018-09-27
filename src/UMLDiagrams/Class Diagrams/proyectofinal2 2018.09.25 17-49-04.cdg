@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="proyectofinal2">
+  <ClassDiagramComponents>
+    <Interface name="Comparable" package="proyectofinal2" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="compareTo" returnType="Double" visibility="public">
+          <Argument type="Operacion" name="o"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="ListaOperacion" package="proyectofinal2" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="cabeza" type="NodoListaOperacion" visibility="private"/>
+        <Field name="cont" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="NodoListaOperacion" name="cabeza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCabeza" returnType="NodoListaOperacion" visibility="public"/>
+        <Method name="getContador" returnType="int" visibility="public"/>
+        <Method name="setCabeza" returnType="void" visibility="public">
+          <Argument type="NodoListaOperacion" name="cabeza"/>
+        </Method>
+        <Method name="setContador" returnType="void" visibility="public">
+          <Argument type="int" name="contador"/>
+        </Method>
+        <Method name="agregar" returnType="void" visibility="public">
+          <Argument type="Operacion" name="operacion"/>
+        </Method>
+        <Method name="listar" returnType="void" visibility="public"/>
+        <Method name="ordernarAsc" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaOperacionImpl" package="proyectofinal2" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="NodoListaOperacion" package="proyectofinal2" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="data" type="Operacion" visibility="private"/>
+        <Field name="next" type="NodoListaOperacion" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getData" returnType="Operacion" visibility="public"/>
+        <Method name="setData" returnType="void" visibility="public">
+          <Argument type="Operacion" name="data"/>
+        </Method>
+        <Method name="getNext" returnType="NodoListaOperacion" visibility="public"/>
+        <Method name="setNext" returnType="void" visibility="public">
+          <Argument type="NodoListaOperacion" name="next"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NodoPilaOperacion" package="proyectofinal2" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="data" type="double" visibility="private"/>
+        <Field name="next" type="NodoPilaOperacion" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getData" returnType="double" visibility="public"/>
+        <Method name="setData" returnType="void" visibility="public">
+          <Argument type="double" name="data"/>
+        </Method>
+        <Method name="getNext" returnType="NodoPilaOperacion" visibility="public"/>
+        <Method name="setNext" returnType="void" visibility="public">
+          <Argument type="NodoPilaOperacion" name="next"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Operacion" package="proyectofinal2" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="miPila" type="PilaOperacion&lt;Double&gt;" visibility="package"/>
+        <Field name="exprAux" type="String" visibility="private"/>
+        <Field name="aux" type="double" visibility="private"/>
+        <Field name="cadena" type="String[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="exprAux"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getExprAux" returnType="String" visibility="public"/>
+        <Method name="getAux" returnType="double" visibility="public"/>
+        <Method name="setAux" returnType="void" visibility="public">
+          <Argument type="double" name="aux"/>
+        </Method>
+        <Method name="split" returnType="void" visibility="public">
+          <Argument type="String[]" name="str"/>
+        </Method>
+        <Method name="isNumber" returnType="boolean" visibility="public">
+          <Argument type="String" name="expr"/>
+        </Method>
+        <Method name="compareTo" returnType="Double" visibility="public">
+          <Argument type="Operacion" name="opera"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="OperacionTest" package="proyectofinal2" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PilaOperacion" package="proyectofinal2" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="cima" type="NodoPilaOperacion" visibility="private"/>
+        <Field name="size" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCima" returnType="NodoPilaOperacion" visibility="public"/>
+        <Method name="setCima" returnType="void" visibility="public">
+          <Argument type="NodoPilaOperacion" name="cima"/>
+        </Method>
+        <Method name="getSize" returnType="int" visibility="public"/>
+        <Method name="setSize" returnType="void" visibility="public">
+          <Argument type="int" name="size"/>
+        </Method>
+        <Method name="isEmpty" returnType="boolean" visibility="public"/>
+        <Method name="push" returnType="void" visibility="public">
+          <Argument type="double" name="operador"/>
+        </Method>
+        <Method name="pop" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProyectoFinal2" package="proyectofinal2" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ValidaStringInt" package="proyectofinal2" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Methods>
+        <Method name="isNumber" returnType="boolean" visibility="public">
+          <Argument type="String" name="expr"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="data" source="proyectofinal2.NodoListaOperacion" target="proyectofinal2.Operacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="proyectofinal2.PilaOperacion" target="proyectofinal2.NodoPilaOperacion"/>
+    <UseRelation source="proyectofinal2.NodoPilaOperacion" target="proyectofinal2.PilaOperacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectofinal2.PilaOperacion" target="proyectofinal2.PilaOperacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectofinal2.Operacion" target="proyectofinal2.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectofinal2.ListaOperacion" target="proyectofinal2.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="next" source="proyectofinal2.NodoPilaOperacion" target="proyectofinal2.NodoPilaOperacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectofinal2.Operacion" target="proyectofinal2.ValidaStringInt"/>
+    <IsRelation name="is" source="proyectofinal2.ListaOperacionImpl" target="proyectofinal2.ListaOperacion"/>
+    <HasRelation name="next" source="proyectofinal2.NodoListaOperacion" target="proyectofinal2.NodoListaOperacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="NodoListaOperacion"/>
+    <UseRelation source="proyectofinal2.NodoListaOperacion" target="proyectofinal2.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectofinal2.Operacion" target="proyectofinal2.Comparable"/>
+    <HasRelation name="cima" source="proyectofinal2.PilaOperacion" target="proyectofinal2.NodoPilaOperacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cabeza" source="proyectofinal2.ListaOperacion" target="proyectofinal2.NodoListaOperacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="NodoListaOperacion"/>
+    <UseRelation source="proyectofinal2.Comparable" target="proyectofinal2.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
